@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotatex(360deg);
+  }
+}
+@keyframes moving {
+  0% {
+    transform: translate(500px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes appearance {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+#header {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(164, 142, 114);
+}
+#header h1 {
+  animation: fadeIn 3s linear, rotation 3s ease-in-out 1s infinite alternate forwards;
+  font-size: 100px;
+  color: rgb(246, 203, 139);
+}
+
+#body {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 80px;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#body .container-wrapper {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  min-height: 100vh;
+  width: 80%;
+}
+#body .container-wrapper .container {
+  border-radius: 40px;
+  min-height: 100vh;
+  background: #f1b775;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#body .container-wrapper .container .news-card {
+  animation: appearance 3s linear, moving 3s ease-in-out;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: 20px 0 20px 0;
+  padding: 20px;
+  background-color: rgb(125, 99, 69);
+  border: 10px solid rgb(125, 99, 69);
+  transition: border-color 0.2s ease-in-out;
+}
+#body .container-wrapper .container .news-card__header {
+  padding: 10px;
+  text-align: center;
+  color: rgb(250, 227, 200);
+  transition: color 0.2s ease-in-out;
+}
+#body .container-wrapper .container .news-card__date-category {
+  color: rgb(222, 148, 148);
+}
+#body .container-wrapper .container .news-card:hover {
+  border-color: rgb(215, 176, 130);
+}
+#body .container-wrapper .container .news-card:hover .news-card__header {
+  color: rgb(255, 186, 108);
+}/*# sourceMappingURL=style.css.map */

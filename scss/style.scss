@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import 'animations';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#header{
+    width: 100vw;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color:rgb(164, 142, 114);
+
+    h1 {
+        @include siteHeaderAnimation;
+
+        font-size: 100px;
+        color: rgb(246, 203, 139);
+    }
+}
+
+#body{
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 80px;  
+
+    background-color: bisque;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-wrapper{
+        @include defaultAppearance;
+
+
+        min-height: 100vh;
+        width: 80%;
+
+
+        .container {   
+            border-radius: 40px;
+            min-height: 100vh;
+            background: #f1b775;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .news-card {
+                @include cardAppearance;
+
+                width:80%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 20px;
+
+                margin: 20px 0 20px 0;
+                padding: 20px;
+
+                background-color:rgb(125, 99, 69); 
+                border: 10px solid rgb(125, 99, 69);
+                transition: border-color 0.2s ease-in-out;
+                
+                &__header {
+                    padding: 10px;
+                    text-align: center;
+                    color: rgb(250, 227, 200);
+                    
+                    transition: color 0.2s ease-in-out;
+                }
+                &__date-category {
+                    color: rgb(222, 148, 148);
+                }
+
+                &:hover {
+                    border-color: rgb(215, 176, 130);
+                }
+                &:hover .news-card__header{
+                    color: rgb(255, 186, 108);;
+                }
+            }
+        }
+    }
+}
+
+

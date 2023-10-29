@@ -1,0 +1,58 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 00%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotatex(360deg);
+    }
+}
+
+@keyframes moving{
+    0% {
+        transform: translate(500px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes appearance{
+    0% {
+        opacity: 0%;
+    }
+    
+    50% {
+        opacity: 0%;
+    }
+    
+    100% {
+        opacity: 100%;
+    }
+}
+
+
+
+
+@mixin cardAppearance{
+    animation: appearance 3s linear, moving 3s ease-in-out;
+}
+
+@mixin defaultAppearance {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@mixin siteHeaderAnimation {
+    animation: fadeIn 3s linear, rotation 3s ease-in-out 1s infinite alternate forwards;
+}
